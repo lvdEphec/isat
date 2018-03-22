@@ -86,3 +86,6 @@ function ajouterPersonnage() {
     console.log("TODO : ajouter un personnage à la liste dans la page HTML");
 }
 
+function mettreListeItalique() {
+    console.log("TODO : mettre tous les élément <li> de la page en italique");
+}
