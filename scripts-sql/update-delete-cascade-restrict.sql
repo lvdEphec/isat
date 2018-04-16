@@ -64,12 +64,15 @@ INSERT INTO "DBA"."tbAliments2" ("alimLib","alimPrixKg","categId") VALUES('girof
 /*********************************************/
 SELECT * from tbCategories2;
 SELECT * from tbAliments2;
+
+
 /*********************************************/
 /* QUE VA-T-IL SE PASSER ? */
 DELETE from tbCategories2 where categID = 'E'
 //* QUE VA-T-IL SE PASSER ? */
 DELETE from tbCategories2 where categID = 'P'
 SELECT * from tbAliments2 where categID = 'P'
+
 /*********************************************/
 /* QUE VA-T-IL SE PASSER ? */
 UPDATE tbCategories2 set categID = 'Z' where categID = 'F';
@@ -80,6 +83,8 @@ SELECT * from tbAliments2;
 UPDATE tbCategories2 set categID = NULL where categID = 'Z';
 /* QUE VA-T-IL SE PASSER ? */
 UPDATE tbAliments2 set categID = 'Y' where categID = 'Z';
+
+
 /*********************************************/
 ALTER TABLE "DBA"."tbAliments2" DROP CONSTRAINT "fkAliCat2";
 /* NOT NULL, ON UPDATE RESTRICT */
@@ -93,6 +98,8 @@ SELECT * from tbAliments2;
 UPDATE tbAliments2 set categID = 'Y' where categID = 'Z';
 /* QUE VA-T-IL SE PASSER ? */
 UPDATE tbAliments2 set categID = NULL where categID = 'Z';
+
+
 /*********************************************/
 ALTER TABLE "DBA"."tbAliments2" DROP CONSTRAINT "fkAliCat2";
 /*(NULL), ON UPDATE RESTRICT */
@@ -107,10 +114,13 @@ UPDATE tbAliments2 set categID = NULL where categID = 'Z';
 UPDATE tbAliments2 set categID = 'Z' where categID IS NULL;
 /* QUE VA-T-IL SE PASSER ? */
 DELETE from tbCategories2;
+
+
 /***  ajouter contrainte incorrecte? existence?  *************************/
 ALTER TABLE "DBA"."tbAliments2" DROP CONSTRAINT "fkAliCat2";
 ALTER TABLE "DBA"."tbAliments2" ADD CONSTRAINT "incorrect" NOT NULL FOREIGN KEY ( "categId" ASC )
 REFERENCES "DBA"."tbCategories2" ( "categLib" ) ON UPDATE RESTRICT;
+
 /*********************************************/
 ALTER TABLE "DBA"."tbAliments2" DROP CONSTRAINT "fkAliCat2";
 /* NOT NULL ON UPDATE CASCADE ON DELETE CASCADE */
