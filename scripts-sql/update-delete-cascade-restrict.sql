@@ -1,4 +1,7 @@
-DROP TABLE tbCategories2;
+/* L'objectif est de prédire le résultats de ces lignes de scripts avant de les exécuter 
+tout en sachant expliquer précisément les comportements obtenus */
+
+-- DROP TABLE tbCategories2;
 CREATE TABLE "DBA"."tbCategories2" (
 	"categId" CHAR(1) NOT NULL,
 	"categLib" VARCHAR(20) NULL,
@@ -6,7 +9,7 @@ CREATE TABLE "DBA"."tbCategories2" (
 );
 select * from tbCategories2
 
-DROP TABLE tbAliments2;
+-- DROP TABLE tbAliments2;
 CREATE TABLE "DBA"."tbAliments2" (
 	"alimId" INTEGER NOT NULL DEFAULT AUTOINCREMENT,
 	"alimLib" VARCHAR(25) NULL,
