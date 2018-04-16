@@ -1,5 +1,6 @@
-/* L'objectif est de prédire le résultats de ces lignes de scripts avant de les exécuter 
-tout en sachant expliquer précisément les comportements obtenus */
+
+/* L'objectif est de prédire les résultats de ces lignes de script avant de les exécuter,
+tout en comprenant et en sachant expliquer précisément les comportements obtenus. */
 
 -- DROP TABLE tbCategories2;
 CREATE TABLE "DBA"."tbCategories2" (
